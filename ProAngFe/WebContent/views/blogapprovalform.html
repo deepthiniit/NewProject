@@ -1,0 +1,22 @@
+
+<div class="panel panel-info">
+	<div class="panel-heading">
+		{{blog.blogTitle}}<br> <b>Posted On:</b> {{blog.postedOn |
+		date:'medium'}}<br> <b>Posted By:</b>{{blog.postedBy.firstname}}&nbsp;{{blog.postedBy.lastname}}
+		<div class="panel-body">
+			<p ng-bind-html="content"></p>
+
+		</div>
+	</div>
+	<button type="button" class="btn btn-primary" ng-click="approve(blog)"
+		ng-hide="rejectionTxt">Approve</button>
+	&nbsp;
+	<button type="button" class="btn btn-warning"
+		ng-click="showRejectionTxt(blog)" ng-hide="rejectionTxt">Reject</button>
+	<br>
+	<div ng-show="rejectionTxt">
+		Rejection Reason<br>
+		<textarea ng-model="rejectionReason"></textarea>
+		<button type="button" class="btn btn-warning" ng-click="reject(blog)">Submit></button>
+	</div>
+</div>

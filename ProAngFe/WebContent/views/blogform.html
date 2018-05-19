@@ -1,0 +1,16 @@
+<span style="color: red">{{error.message}}</span>
+<form method="post">
+	<div class="form-grop">
+		<lable> Enter blog title</lable>
+		<input type="text" ng-model="blog.blogTitle" class="form-control">
+	</div>
+	<div>
+		<lable>Enter blog content</lable>
+		<textarea rows="5" cols="10" ng-model="blog.blogContent"
+			class="form-control">
+ </textarea>
+	</div>
+	<div>
+		<input type="submit" value="Add Blog" ng-click="addBlog(blog)">
+	</div>
+</form>

@@ -1,0 +1,9 @@
+<ul style="list-style: none">
+	<li ng-repeat="friend in friends">{{friend.email}}<br>
+		{{friend.firstname}} &nbsp;{{friend.lastname}}<Br>
+		{{friend.phonenumber}}<br> {{friend.role}}<br> <img
+		src="http://localhost:8030/ProAngMe/getimage/{{friend.email}}"
+		alt="Image" height="40px" width="40px">
+		<hr>
+	</li>
+</ul>

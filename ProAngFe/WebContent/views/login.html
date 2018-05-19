@@ -1,0 +1,28 @@
+
+<!-- {{error.message}}  ->  Login failed...Invalid email/password
+                   ->  Unauthorised access...
+ {{message}}       ->  Successfully loggedout 
+  -->
+
+<div id="login-box">
+	<span style="" class="error" ng-show="error.message!=undefined">Invalid
+		email/password</span> <span class="msg" ng-show="message!=undefined">Successfully
+		logged out!!!</span>
+	<form>
+		<table>
+			<tr>
+				<td>Enter Email:</td>
+				<td><input type="email" ng-model="user.email"></td>
+			</tr>
+
+			<td>Enter Password :</td>
+			<td><input type="password" ng-model="user.password"></td>
+			</tr>
+
+			<tr>
+				<td colspan="2"><input type="submit" ng-click="login(user)"></td>
+			</tr>
+		</table>
+	</form>
+
+</div>

@@ -1,0 +1,42 @@
+ {{error.message}}
+<form method="post">
+
+	<div class="form-group">
+		Enter Email Id <input type="email" ng-model="user.email"
+			class=form-control">
+	</div>
+
+
+	<div class="form-group">
+		Enter password <input type="password" ng-model="user.password"
+			class=form-control">
+	</div>
+
+
+	<div class="form-group">
+		Enter Firstname <input type="text" ng-model="user.firstname"
+			class=form-control">
+	</div>
+
+
+	<div class="form-group">
+		Enter Lastname <input type="text" ng-model="user.lastname"
+			class=form-control">
+	</div>
+
+	<div class="form-group">
+		Enter Phonenumber <input type="text" ng-model="user.phonenumber"
+			class=form-control">
+	</div>
+
+
+	<div class="form-group">
+		<select ng-model="user.role">
+			<option value="STUDENT">Student
+			<option vlaue="EMPLOYEE">Employee
+			<option value="ALUMNI">Alumni
+		</select>
+	</div>
+	<input type="submit" ng-click="registerUser(user)" value="Register">
+
+</form>

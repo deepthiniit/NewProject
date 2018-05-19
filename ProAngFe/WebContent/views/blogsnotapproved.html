@@ -1,0 +1,23 @@
+
+<span ng-show="blogsWaitngForApproval.length==0">No Blogs Waiting
+	For Approval</span>
+<span ng-show="blogsWaitngForApproval.length!=0"> Blogs Waiting
+	For Approval</span>
+<div class="container">
+	<!--  search <input type="text" ng-model="searchTxt"> -->
+	<div class="row">
+		<div ng-repeat="blog in  blogsWaitingForApproval">
+			<!--  List<Job> response.data -->
+			<div class="panel panel-info">
+
+				<div class="panel-heading">
+					<a href="#/getblognotapproved/{{blog.id}}">{{blog.blogTitle}}</a>
+				</div>
+			</div>
+			<div class="panel-body">
+				<b>Posted on</b>{{blog. postedOn | date:'medium'}}<br> <b>Posted
+					By:</b>{{blog.postedBy.firstname}}&nbsp;{{blog.postedBy.lastname}}
+			</div>
+		</div>
+	</div>
+</div>

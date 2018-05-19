@@ -1,0 +1,31 @@
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div ng-repeat="user in suggestedUsers">
+			<table class="table table-striped">
+				<div class="panel-body">
+					<div style="background-color: lightblue">
+						<b>Email Id:</b> {{user[0]}}<br> <b>Name:</b>{{user[1]}}&nbsp;{{user[2]}}<br>
+						<b>Phone Number:</b>{{user[5]}}<br> <b>Online Status:</b><i
+							ng-show="user[3]">Online</i><i ng-hide="user[3]">Offline</i>
+					</div>
+				</div>
+				<td><a href="" class="btn btn-primary"
+					ng-click="addFriend(user[0])">Send Friend Request</a></td>
+
+
+			</table>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
